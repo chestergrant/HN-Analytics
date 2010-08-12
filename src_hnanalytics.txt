@@ -1,0 +1,7 @@
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNAnalytics.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNDataAnalyser.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNDataReader.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNDataRecord.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNWordData.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\HNWordDataComparator.java"
+"C:\\Users\\chester\\Documents\\JCreator LE\\MyProjects\\HNAnalytics\\src\\StorageClass.java"
