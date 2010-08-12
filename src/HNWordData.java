@@ -22,7 +22,7 @@ class HNWordData {
 	
 	//Output this word and it's statistic
 	public String toString(){
-		String output = "Word: "+wordName+" Frequency: "+freqInTitles;
+		String output = wordName+","+freqInTitles;
 		return output;
 	}
 }

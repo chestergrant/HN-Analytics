@@ -24,7 +24,8 @@ public class HNAnalytics {
        	HNDataReader hnDataReader = new HNDataReader(filename);
        	hnDataReader.addHandle(hnDataAnalyser);
        	hnDataReader.read();   	
-       	analysedData = hnDataAnalyser.getAnalysedData();    	 	  	
+       	analysedData = hnDataAnalyser.getAnalysedData(); 
+       	System.out.println(hnDataAnalyser.getNumOfTitles());   	 	  	
     }
     
     //Sorts the data that has been analysed
@@ -39,11 +40,16 @@ public class HNAnalytics {
     	
     }
     //Outputs the content of the analysed data to a file
-    public void print(String outputFilename){
+    public void print(String outputFilename,int numRecords){
+    	numRecords = numRecords %analysedData.size();
     	try{   	
     	    PrintWriter out = new PrintWriter(new FileWriter(outputFilename));
-    		for(int i = 0; i < analysedData.size(); i++){
+    		for(int i = 0; i < numRecords; i++){
     		   	out.println((HNWordData)analysedData.get(i));
+    		   	/*if(i != numRecords-1){
+    		   		out.print(",");
+    		   	}
+    		   	out.println();*/
     		   	System.out.println((HNWordData)analysedData.get(i));
     		}
     		out.close();
@@ -55,11 +61,12 @@ public class HNAnalytics {
     public static void main(String[] args) {
     	
     	String filename = "hntrend.csv";  //Stores the location and filename of the file with the data
-    	String outputFilename = "output.txt"; //Stores the location and filename of the file to be output
+    	String outputFilename = "output.csv"; //Stores the location and filename of the file to be output
+    	int numWords = 40; //Stores the number of top words we would like to displayed
     	HNAnalytics hnAnalytics = new HNAnalytics(filename); //Initialize
     	hnAnalytics.analyse(); //Gets the statistic out of the data
     	hnAnalytics.sort(); //Stores the data in a meaningful manner
-    	hnAnalytics.print(outputFilename); // Outputs the data to file specified
+    	hnAnalytics.print(outputFilename,numWords); // Outputs the data to file specified
     	
     }
 }

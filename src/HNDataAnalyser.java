@@ -25,6 +25,7 @@ class HNDataAnalyser implements StorageClass{
 		if(record.size() == numFields){
 			String title = getTitle(record);
 			title = title.trim();
+			title = title.toLowerCase();
 			Vector uniqueWords = getUniqueWords(title);
 			updateStatistic(uniqueWords);
 			numberOfTitles++;
