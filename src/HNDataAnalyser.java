@@ -6,6 +6,7 @@ class HNDataAnalyser implements StorageClass{
 	int titleIndex;
 	int numberOfTitles;
 	int numFields;
+	int frequency;
 	public HNDataAnalyser(){
 		words = new Vector();
 		index = new HashMap();
@@ -22,8 +23,10 @@ class HNDataAnalyser implements StorageClass{
 		if(numFields == -1){
 			numFields = record.size();
 		}
+		
 		if(record.size() == numFields){
 			String title = getTitle(record);
+			frequency = Integer.parseInt((String)record.get(titleIndex+1));
 			title = title.trim();
 			title = title.toLowerCase();
 			Vector uniqueWords = getUniqueWords(title);
@@ -85,7 +88,7 @@ class HNDataAnalyser implements StorageClass{
 	//increment the occurence of this word
 	private void incrementIndex(int idx){
 		HNWordData aWordStat = (HNWordData)words.get(idx);
-		aWordStat.incrementOccurrence();
+		aWordStat.incrementOccurrence(frequency);
 	}
 	public Vector getAnalysedData(){
 		return words;

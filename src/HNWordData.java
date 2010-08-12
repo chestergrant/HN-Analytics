@@ -14,6 +14,9 @@ class HNWordData {
 	public void incrementOccurrence(){
 		freqInTitles++;
 	}
+	public void incrementOccurrence(int value){
+		freqInTitles =+ value;
+	}
 	
 	//Return the number of times this word has occurred in
 	public int freq(){
