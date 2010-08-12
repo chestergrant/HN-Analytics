@@ -19,7 +19,7 @@
 			<applet_ref/>
 			<debugger_ref/>
 			<param/>
-			<run/>
+			<run>HNAnalytics</run>
 			<verify>true</verify>
 		</runtime>
 	</runtimes>
@@ -31,6 +31,30 @@
 			</folderitem>
 			<fileitem>
 				<path>src\HNAnalytics.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\HNDataAnalyser.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\HNDataReader.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\HNDataRecord.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\HNWordData.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\HNWordDataComparator.java</path>
+				<folder>src</folder>
+			</fileitem>
+			<fileitem>
+				<path>src\StorageClass.java</path>
 				<folder>src</folder>
 			</fileitem>
 		</include>

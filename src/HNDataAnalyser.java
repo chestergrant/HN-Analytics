@@ -5,18 +5,31 @@ class HNDataAnalyser implements StorageClass{
 	HashMap index;
 	int titleIndex;
 	int numberOfTitles;
-	
+	int numFields;
 	public HNDataAnalyser(){
 		words = new Vector();
 		index = new HashMap();
-		titleIndex = 3;
+		titleIndex = 2;
+		numberOfTitles = 0;
+		numFields = -1;
 	}
-	
+	//Number of Titles
+	public int getNumOfTitles(){
+		return numberOfTitles;
+	}
 	//Stores the word while analysing it
 	public void store( HNDataRecord record){
-		String title = getTitle(record);
-		Vector uniqueWords = getUniqueWords(title);
-		updateStatistic(uniqueWords);
+		if(numFields == -1){
+			numFields = record.size();
+		}
+		if(record.size() == numFields){
+			String title = getTitle(record);
+			title = title.trim();
+			Vector uniqueWords = getUniqueWords(title);
+			updateStatistic(uniqueWords);
+			numberOfTitles++;
+		}
+		
 	}
 	
 	//Gets the title of the post
@@ -58,7 +71,7 @@ class HNDataAnalyser implements StorageClass{
 		if(!index.containsKey(aWord)){
 			HNWordData newWord = new HNWordData(aWord);
 			words.add(newWord);
-			index.put(aWord,0);			
+			index.put(aWord,words.size()-1);			
 		}
 	}
 	

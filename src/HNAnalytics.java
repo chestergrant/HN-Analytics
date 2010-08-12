@@ -44,15 +44,17 @@ public class HNAnalytics {
     	    PrintWriter out = new PrintWriter(new FileWriter(outputFilename));
     		for(int i = 0; i < analysedData.size(); i++){
     		   	out.println((HNWordData)analysedData.get(i));
+    		   	System.out.println((HNWordData)analysedData.get(i));
     		}
     		out.close();
     	}catch(IOException ex){
     		
     	}
     }
+    
     public static void main(String[] args) {
     	
-    	String filename = "hndata.csv";  //Stores the location and filename of the file with the data
+    	String filename = "hntrend.csv";  //Stores the location and filename of the file with the data
     	String outputFilename = "output.txt"; //Stores the location and filename of the file to be output
     	HNAnalytics hnAnalytics = new HNAnalytics(filename); //Initialize
     	hnAnalytics.analyse(); //Gets the statistic out of the data

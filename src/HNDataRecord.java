@@ -24,7 +24,7 @@ class HNDataRecord {
 	public String toString(){
 		String output = "";
 		for(int i = 0; i<size(); i++){
-			output += (String)hnDataRecord.get(i);
+			output += (String)hnDataRecord.get(i)+"\n";
 		}
 		return output;
 	}
