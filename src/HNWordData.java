@@ -18,7 +18,18 @@ class HNWordData {
 	}
 	//Increment Karma associated with this word
 	public void incrementKarma(int value){
+		int totalKarmaBefore = totalKarma;
 		totalKarma = totalKarma + value;
+		/*if(totalKarma/2 == totalKarmaBefore){
+			System.out.println(value);
+			System.exit(1);
+		}*/
+	}
+	public int rank(){
+		if(freq() >3 ){
+			return averageKarma();
+		}
+		return 0 ;
 	}
 	
 	//Returns the average Karma of a word

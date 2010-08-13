@@ -3,6 +3,7 @@ import java.util.*;
 class HNDataAnalyser implements StorageClass{
 	Vector words;
 	HashMap index;
+	HashMap titleHash;
 	int titleIndex;
 	int numberOfTitles;
 	int numFields;
@@ -10,6 +11,7 @@ class HNDataAnalyser implements StorageClass{
 	public HNDataAnalyser(){
 		words = new Vector();
 		index = new HashMap();
+		titleHash = new HashMap();
 		titleIndex = 2;
 		numberOfTitles = 0;
 		numFields = -1;
@@ -27,12 +29,17 @@ class HNDataAnalyser implements StorageClass{
 		if(record.size() == numFields){
 			String title = getTitle(record);
 			karma = Integer.parseInt((String)record.get(titleIndex+1));
+			//System.out.println(karma);
 			//System.out.println(frequency);
 			title = title.trim();
-			title = title.toLowerCase();
-			Vector uniqueWords = getUniqueWords(title);
-			updateStatistic(uniqueWords);
-			numberOfTitles++;
+			if(!titleHash.containsKey(title)){
+				titleHash.put(title,title);
+				title = title.toLowerCase();
+				Vector uniqueWords = getUniqueWords(title);
+				updateStatistic(uniqueWords);
+				numberOfTitles++;
+			}
+			
 		}
 		
 	}
