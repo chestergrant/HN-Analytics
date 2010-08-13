@@ -21,6 +21,11 @@ class HNWordData {
 		totalKarma = totalKarma + value;
 	}
 	
+	//Returns the average Karma of a word
+	public int averageKarma(){
+		return totalKarma /freqInTitles;
+	}
+	
 	//Return the total number of Karma accured by this word
 	public int karma(){
 		return totalKarma;
@@ -32,7 +37,7 @@ class HNWordData {
 	
 	//Output this word and it's statistic
 	public String toString(){
-		String output = wordName+","+freqInTitles+","+totalKarma;
+		String output = wordName+","+freqInTitles+","+totalKarma+","+averageKarma();
 		return output;
 	}
 }

@@ -40,7 +40,7 @@ class HNDataReader {
 	  BufferedReader in = new BufferedReader(new FileReader(filename));
 	  String inputLine= "";
 	  int count =0;
-	  while(((inputLine=in.readLine())!=null)&&(count < 10000)){
+	  while(((inputLine=in.readLine())!=null)/*&&(count < 10000)*/){
 	  	        count++;
 	  	       	HNDataRecord tempRecord = getRecordData(inputLine);					
 				delegate.store(tempRecord);			
