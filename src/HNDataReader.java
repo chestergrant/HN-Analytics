@@ -39,8 +39,9 @@ class HNDataReader {
 	public void inputData(String filename) throws IOException{
 	  BufferedReader in = new BufferedReader(new FileReader(filename));
 	  String inputLine= "";
-	  
-	  while(((inputLine=in.readLine())!=null)){
+	  int count =0;
+	  while(((inputLine=in.readLine())!=null)/*&&(count < 10000)*/){
+	  	        count++;
 	  	       	HNDataRecord tempRecord = getRecordData(inputLine);					
 				delegate.store(tempRecord);			
 		}		
