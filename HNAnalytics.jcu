@@ -2,7 +2,7 @@
 
 <workspace_user>
 	<active_project>
-		<label>HNAnalytics</label>
+		<label>HNScraper</label>
 	</active_project>
 	<projects>
 		<project>
@@ -12,19 +12,31 @@
 				<path>src</path>
 			</folderitem>
 		</project>
+		<project>
+			<label>HNScraper</label>
+			<showfiles>false</showfiles>
+			<folderitem>
+				<path>HNScraper\classes</path>
+				<dir>classes</dir>
+			</folderitem>
+			<folderitem>
+				<path>HNScraper\src</path>
+				<dir>src</dir>
+			</folderitem>
+		</project>
 	</projects>
 	<open_files>
 		<docitem>
 			<path>src\HNDataReader.java</path>
 			<source>true</source>
 			<index>0</index>
-			<active>false</active>
+			<active>true</active>
 		</docitem>
 		<docitem>
 			<path>src\HNDataAnalyser.java</path>
 			<source>true</source>
 			<index>1</index>
-			<active>true</active>
+			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\HNWordData.java</path>
@@ -36,6 +48,12 @@
 			<path>src\HNAnalytics.java</path>
 			<source>true</source>
 			<index>3</index>
+			<active>false</active>
+		</docitem>
+		<docitem>
+			<path>src\HNWordDataComparator.java</path>
+			<source>true</source>
+			<index>4</index>
 			<active>false</active>
 		</docitem>
 	</open_files>

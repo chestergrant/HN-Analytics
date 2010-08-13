@@ -13,5 +13,8 @@
 		<project>
 			<path>HNAnalytics.jcp</path>
 		</project>
+		<project>
+			<path>HNScraper\HNScraper.jcp</path>
+		</project>
 	</projects>
 </workspace>

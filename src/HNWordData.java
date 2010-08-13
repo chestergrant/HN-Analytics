@@ -26,10 +26,7 @@ class HNWordData {
 		}*/
 	}
 	public int rank(){
-		if(freq() >3 ){
-			return averageKarma();
-		}
-		return 0 ;
+		return freq();
 	}
 	
 	//Returns the average Karma of a word
