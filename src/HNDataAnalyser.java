@@ -6,7 +6,7 @@ class HNDataAnalyser implements StorageClass{
 	int titleIndex;
 	int numberOfTitles;
 	int numFields;
-	int frequency;
+	int karma;
 	public HNDataAnalyser(){
 		words = new Vector();
 		index = new HashMap();
@@ -26,7 +26,7 @@ class HNDataAnalyser implements StorageClass{
 		
 		if(record.size() == numFields){
 			String title = getTitle(record);
-			frequency = Integer.parseInt((String)record.get(titleIndex+1));
+			karma = Integer.parseInt((String)record.get(titleIndex+1));
 			//System.out.println(frequency);
 			title = title.trim();
 			title = title.toLowerCase();
@@ -88,12 +88,13 @@ class HNDataAnalyser implements StorageClass{
 	
 	//increment the occurence of this word
 	private void incrementIndex(int idx){
-		int before = ((HNWordData)words.get(idx)).freq();
-		int after = ((HNWordData)words.get(idx)).freq() + frequency;
-		((HNWordData)words.get(idx)).incrementOccurrence(after);
+		int before = ((HNWordData)words.get(idx)).karma();		
+		((HNWordData)words.get(idx)).incrementKarma(karma);
+		((HNWordData)words.get(idx)).incrementOccurrence();
+		int after = ((HNWordData)words.get(idx)).karma(); 
 		
-		if(before+frequency != after){
-			System.out.println(before+" "+frequency+" "+after);
+		if(before+karma != after){
+			System.out.println(before+" "+karma+" "+after);
 			System.exit(1);
 		}
 	}

@@ -15,51 +15,27 @@
 	</projects>
 	<open_files>
 		<docitem>
-			<path>..\..\..\..\..\..\Program Files\Xinox Software\JCreatorV4LE\start.zip</path>
-			<source>false</source>
-			<index>0</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
-			<path>src\HNDataRecord.java</path>
-			<source>true</source>
-			<index>1</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
 			<path>src\HNDataReader.java</path>
 			<source>true</source>
-			<index>2</index>
+			<index>0</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\HNDataAnalyser.java</path>
 			<source>true</source>
-			<index>3</index>
+			<index>1</index>
 			<active>true</active>
-		</docitem>
-		<docitem>
-			<path>src\StorageClass.java</path>
-			<source>true</source>
-			<index>4</index>
-			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\HNWordData.java</path>
 			<source>true</source>
-			<index>5</index>
+			<index>2</index>
 			<active>false</active>
 		</docitem>
 		<docitem>
 			<path>src\HNAnalytics.java</path>
 			<source>true</source>
-			<index>6</index>
-			<active>false</active>
-		</docitem>
-		<docitem>
-			<path>src\HNWordDataComparator.java</path>
-			<source>true</source>
-			<index>7</index>
+			<index>3</index>
 			<active>false</active>
 		</docitem>
 	</open_files>
